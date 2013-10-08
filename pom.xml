@@ -1,26 +1,26 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.javamoney</groupId>
-  <artifactId>javamoney-parent</artifactId>
-  <version>0.3-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>Money and Currency - JavaMoney parent</name>
-  <description>JavaMoney Parent POM</description>
-  <organization>
-  	<name>JavaMoney.org</name>
-  	<url>http://javamoney.org</url>
-  </organization>
-  <properties>
-		<jsr.version>0.7-SNAPSHOT</jsr.version>
-		
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.javamoney</groupId>
+	<artifactId>javamoney-parent</artifactId>
+	<version>0.3-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Money and Currency - JavaMoney parent</name>
+	<description>JavaMoney Parent POM</description>
+	<organization>
+		<name>JavaMoney</name>
+		<url>http://javamoney.org</url>
+	</organization>
+	<properties>
+		<jsr.version>0.7</jsr.version>
+		<javamoney.version>${project.version}</javamoney.version>
 		<jdkVersion>1.7</jdkVersion>
 		<maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
 		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<slf4j.version>1.7.2</slf4j.version>
 	</properties>
-  <licenses>
+	<licenses>
 		<license>
 			<name>Apache License version 2.0</name>
 			<url>LICENSE</url>
