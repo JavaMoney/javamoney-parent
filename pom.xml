@@ -23,7 +23,35 @@
 	<licenses>
 		<license>
 			<name>Apache License version 2.0</name>
-			<url>LICENSE</url>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
 		</license>
 	</licenses>
+	<inceptionYear>2012</inceptionYear>
+	<profiles>
+		<profile>
+			<id>cloudbees-deployment</id>
+			<activation>
+				<property>
+					<name>cloudbees</name>
+				</property>
+			</activation>
+			<distributionManagement>
+				<site>
+					<id>cloudbees</id>
+					<url>svn:https://svn-jsr354.forge.cloudbees.com/site/</url>
+					<name>Cloudbees Public SVN Site Repository</name>
+				</site>
+				<repository>
+					<id>cloudbees</id>
+					<url>http://repository-jsr354.forge.cloudbees.com/release/</url>
+					<name>Cloudbees Release Repository</name>
+				</repository>
+				<snapshotRepository>
+					<id>cloudbees</id>
+					<url>http://repository-jsr354.forge.cloudbees.com/snapshot/</url>
+					<name>Cloudbees Nexus Snapshots</name>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
 </project>
