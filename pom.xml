@@ -43,12 +43,12 @@
 				</site>
 				<repository>
 					<id>cloudbees</id>
-					<url>http://repository-jsr354.forge.cloudbees.com/release/</url>
+					<url>https://repository-jsr354.forge.cloudbees.com/release/</url>
 					<name>Cloudbees Release Repository</name>
 				</repository>
 				<snapshotRepository>
 					<id>cloudbees</id>
-					<url>http://repository-jsr354.forge.cloudbees.com/snapshot/</url>
+					<url>https://repository-jsr354.forge.cloudbees.com/snapshot/</url>
 					<name>Cloudbees Nexus Snapshots</name>
 				</snapshotRepository>
 			</distributionManagement>
