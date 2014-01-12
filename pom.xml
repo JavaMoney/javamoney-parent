@@ -56,31 +56,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<profiles>
-		<profile>
-			<id>cloudbees-deployment</id>
-			<activation>
-				<property>
-					<name>cloudbees</name>
-				</property>
-			</activation>
-			<distributionManagement>
-				<site>
-					<id>cloudbees</id>
-					<url>svn:https://svn-jsr354.forge.cloudbees.com/site/</url>
-					<name>Cloudbees Public SVN Site Repository</name>
-				</site>
-				<repository>
-					<id>cloudbees</id>
-					<url>https://repository-jsr354.forge.cloudbees.com/release/</url>
-					<name>Cloudbees Release Repository</name>
-				</repository>
-				<snapshotRepository>
-					<id>cloudbees</id>
-					<url>https://repository-jsr354.forge.cloudbees.com/snapshot/</url>
-					<name>Cloudbees Nexus Snapshots</name>
-				</snapshotRepository>
-			</distributionManagement>
-		</profile>
-	</profiles>
 </project>
