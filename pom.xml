@@ -19,6 +19,9 @@
 		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- dependency versions -->
+		<junit.version>4.8.2</junit.version>
+		<slf4j.version>1.6.1</slf4j.version>
 	</properties>
 	<licenses>
 		<license>
@@ -70,6 +73,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.9</version>
 					<executions>
 						<execution>
 							<id>attach-javadocs</id>
@@ -92,6 +96,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
+					<version>2.2.1</version>
 					<executions>
 						<execution>
 							<id>attach-sources</id>
@@ -137,6 +142,13 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>2.4</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>test-jar</goal>
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -163,101 +175,9 @@
 						</execution>
 					</executions>
 				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>jdepend-maven-plugin</artifactId>
-					<version>2.0-beta-2</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-report-plugin</artifactId>
-					<version>2.15</version>
-					<configuration>
-						<aggregate>true</aggregate>
-						<xrefLocation>${project.reporting.outputDirectory}/../xref-test</xrefLocation>
-						<linkXRef>true</linkXRef>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-pmd-plugin</artifactId>
-					<version>3.0.1</version>
-					<configuration>
-						<targetJdk>${maven.compile.targetLevel}</targetJdk>
-						<format>xml</format>
-						<linkXref>true</linkXref>
-						<aggregate>true</aggregate>
-						<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>taglist-maven-plugin</artifactId>
-					<version>2.4</version>
-					<configuration>
-						<aggregate>true</aggregate>
-						<encoding>${project.build.sourceEncoding}</encoding>
-						<tagListOptions>
-							<tagClasses>
-								<tagClass>
-									<displayName>Important fixes that have to be done until the
-										next
-										release</displayName>
-									<tags>
-										<tag>
-											<matchString>FIXME</matchString>
-											<matchType>ignoreCase</matchType>
-										</tag>
-									</tags>
-								</tagClass>
-								<tagClass>
-									<displayName>Things to verify and to check</displayName>
-									<tags>
-										<tag>
-											<matchString>// check:</matchString>
-											<matchType>ignoreCase</matchType>
-										</tag>
-									</tags>
-								</tagClass>
-								<tagClass>
-									<displayName>Just things to do</displayName>
-									<tags>
-										<tag>
-											<matchString>todo</matchString>
-											<matchType>ignoreCase</matchType>
-										</tag>
-										<tag>
-											<matchString>@todo</matchString>
-											<matchType>ignoreCase</matchType>
-										</tag>
-										<tag>
-											<matchString>XXX</matchString>
-											<matchType>ignoreCase</matchType>
-										</tag>
-									</tags>
-								</tagClass>
-							</tagClasses>
-						</tagListOptions>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jxr-plugin</artifactId>
-					<version>2.3</version>
-					<configuration>
-						<aggregate>true</aggregate>
-						<linkJavadoc>true</linkJavadoc>
-						<aggregate>true</aggregate>
-						<javadocDir>${project.name}/apidocs</javadocDir>
-						<!-- stylesheet>${basedir}/src/site/css/javamoneys-jdoc.css</stylesheet -->
-						<windowTitle>JSR 354 - Java Money Sources</windowTitle>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-dependency-plugin</artifactId>
-					<version>2.8</version>
-				</plugin>
+
+
+
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
@@ -295,18 +215,6 @@
 					</configuration>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jar-plugin</artifactId>
-					<version>2.2</version>
-					<executions>
-						<execution>
-							<goals>
-								<goal>test-jar</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-				<plugin>
 					<groupId>org.apache.felix</groupId>
 					<artifactId>maven-bundle-plugin</artifactId>
 					<version>2.3.5</version>
@@ -321,27 +229,6 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
 					<version>3.1</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-project-info-reports-plugin</artifactId>
-					<version>2.7</version>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>findbugs-maven-plugin</artifactId>
-					<version>2.5.2</version>
-					<configuration>
-						<xrefLocation>${project.reporting.outputDirectory}/../xref</xrefLocation>
-						<xmlOutput>true</xmlOutput>
-						<effort>Max</effort>
-						<threshold>Low</threshold>
-						<failOnError>false</failOnError>
-						<findbugsXmlOutput>true</findbugsXmlOutput>
-						<findbugsXmlOutputDirectory>target/site</findbugsXmlOutputDirectory>
-						<srcHtml>xref/</srcHtml>
-						<srcHtmlType>JXR</srcHtmlType>
-					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.jacoco</groupId>
