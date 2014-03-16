@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.javamoney</groupId>
 	<artifactId>javamoney-parent</artifactId>
-	<version>0.4-SNAPSHOT</version>
+	<version>0.4</version>
 	<packaging>pom</packaging>
 	<name>Money and Currency - JavaMoney parent</name>
 	<description>JavaMoney Parent POM</description>
@@ -12,7 +12,7 @@
 		<url>http://javamoney.org</url>
 	</organization>
 	<properties>
-		<jsr.version>0.8-SNAPSHOT</jsr.version>
+		<jsr.version>0.8</jsr.version>
 		<javamoney.version>0.4-SNAPSHOT</javamoney.version>
 		<jdkVersion>1.7</jdkVersion>
 		<maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
@@ -88,7 +88,7 @@
 						<keywords>true</keywords>
 						<linksource>true</linksource>
 						<!-- overview>${basedir}/overview.html</overview -->
-						<source>${project.build.sourceCompilerLevel}</source>
+						<source>${maven.compile.sourceLevel}</source>
 						<!-- stylesheetfile>${basedir}/src/site/css/money-jdoc.css</stylesheetfile -->
 						<verbose>true</verbose>
 					</configuration>
@@ -119,8 +119,6 @@
 						<target>${maven.compile.targetLevel}</target>
 						<compilerArgument>-g</compilerArgument>
 						<encoding>${project.build.sourceEncoding}</encoding>
-						<charset>${project.build.sourceEncoding}</charset>
-						<showDeprecations>true</showDeprecations>
 					</configuration>
 				</plugin>
 				<plugin>
