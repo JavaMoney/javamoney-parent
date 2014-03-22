@@ -3,17 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.javamoney</groupId>
     <artifactId>javamoney-parent</artifactId>
-    <version>0.4</version>
+    <version>0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Money and Currency - JavaMoney parent</name>
     <description>JavaMoney Parent POM</description>
-    <organization>
-        <name>JavaMoney</name>
-        <url>http://javamoney.org</url>
-    </organization>
+    <url>http://java.net/projects/javamoney</url>
+    <inceptionYear>2012</inceptionYear>
+
     <properties>
-        <jsr.version>0.8</jsr.version>
-        <javamoney.version>0.4</javamoney.version>
         <jdkVersion>1.7</jdkVersion>
         <maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
         <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
@@ -23,13 +20,102 @@
         <junit.version>4.8.2</junit.version>
         <slf4j.version>1.6.1</slf4j.version>
     </properties>
+
+    <organization>
+        <name>JavaMoney</name>
+        <url>http://javamoney.org</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>atsticks</id>
+            <name>Anatole Tresch</name>
+            <organization>Credit Suisse</organization>
+            <roles>
+                <role>Specification Lead</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>keilw</id>
+            <name>Werner Keil</name>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>tom-huesler</id>
+            <name>Thomas Hüsler</name>
+            <organization>Espalier Technologies</organization>
+            <timezone>GMT+1</timezone>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>jodastephen</id>
+            <name>Stephen Colebourne</name>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>chrisphe</id>
+            <name>Christopher Pheby</name>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>jeffprestes</id>
+            <name>Jefferson Prestes</name>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>jezdavies</id>
+            <name>Jeremy Davies</name>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>-</id>
+            <name>Benjamin Cotton</name>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>-</id>
+            <name>Simon Martinelli</name>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>-</id>
+            <name>Greg Bakos</name>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/JavaMoney/javamoney-parent.git</connection>
+        <tag>master</tag>
+        <developerConnection>scm:git:https://github.com/JavaMoney/javamoney-parent.git</developerConnection>
+        <url>https://github.com/JavaMoney/javamoney-parent</url>
+    </scm>
+
     <licenses>
         <license>
             <name>Apache License version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0</url>
         </license>
     </licenses>
-    <inceptionYear>2012</inceptionYear>
+
     <build>
         <extensions>
             <extension>
