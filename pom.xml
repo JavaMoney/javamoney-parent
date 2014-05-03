@@ -446,4 +446,8 @@
             </build>
         </profile>
     </profiles>
+    <issueManagement>
+    	<system>GitHub</system>
+    	<url>https://github.com/JavaMoney/javamoney-parent/issues</url>
+    </issueManagement>
 </project>
