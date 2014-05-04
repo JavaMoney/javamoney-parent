@@ -358,7 +358,7 @@
 
 	<repositories>
 		<repository>
-			<id>unitsofmeasurement-github-repo</id>
+			<id>cloudbees-repo-snapshot</id>
 			<name>JSR 354 Snapshot Repository at CloudBees</name>
 			<url>http://repository-jsr354.forge.cloudbees.com/snapshot</url>
 		</repository>
