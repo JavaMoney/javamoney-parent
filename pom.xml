@@ -364,9 +364,16 @@
 
     <repositories>
         <repository>
-            <id>cloudbees-repo-snapshot</id>
-            <name>JSR 354 Snapshot Repository at CloudBees</name>
-            <url>http://repository-jsr354.forge.cloudbees.com/snapshot</url>
+            <name>Sonatype OSS Snapshots</name>
+            <id>SonatypeOSS</id>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </repository>
     </repositories>
 
