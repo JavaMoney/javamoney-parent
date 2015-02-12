@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.javamoney</groupId>
     <artifactId>javamoney-parent</artifactId>
-    <version>1.0-RC2</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Money and Currency - JavaMoney parent</name>
     <description>JavaMoney Parent POM</description>
