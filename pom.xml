@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.javamoney</groupId>
     <artifactId>javamoney-parent</artifactId>
-    <version>1.0-RC3</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Money and Currency - JavaMoney parent</name>
     <description>JavaMoney Parent POM</description>
@@ -16,7 +16,6 @@
         <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <slf4j.version>1.6.1</slf4j.version>
     </properties>
 
     <organization>
@@ -113,20 +112,76 @@
             </roles>
         </developer>
     </developers>
+	
+	<prerequisites>
+        <maven>3.0.4</maven>
+    </prerequisites>
+	
+	<mailingLists>
+        <mailingList>
+            <name>JSR354 Issues List</name>
+            <subscribe>https://java.net/projects/javamoney/lists</subscribe>
+            <unsubscribe>https://java.net/projects/javamoney/lists</unsubscribe>
+            <archive>https://java.net/projects/javamoney/lists/issues/archive</archive>
+            <post>issues@javamoney.java.net</post>
+        </mailingList>
+        <mailingList>
+            <name>JSR354 Public Mailing List</name>
+            <subscribe>https://java.net/projects/javamoney/lists</subscribe>
+            <unsubscribe>https://java.net/projects/javamoney/lists</unsubscribe>
+            <archive>http://java.net/projects/javamoney/lists/jcurrency_mail/archive</archive>
+            <post>jcurrency_mail@javamoney.java.net</post>
+        </mailingList>
+    </mailingLists>
 
+	<licenses>
+        <license>
+            <name>Apache License version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+	
     <scm>
         <connection>scm:git:https://github.com/JavaMoney/javamoney-parent.git</connection>
         <tag>master</tag>
         <developerConnection>scm:git:https://github.com/JavaMoney/javamoney-parent.git</developerConnection>
         <url>https://github.com/JavaMoney/javamoney-parent</url>
     </scm>
+	
+	<repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>libs-release</name>
+            <url>http://oss.jfrog.org/artifactory/libs-release</url>
+        </repository>
+        <repository>
+            <snapshots />
+            <id>snapshots</id>
+            <name>libs-snapshot</name>
+            <url>http://oss.jfrog.org/artifactory/libs-snapshot</url>
+        </repository>
+    </repositories>
 
-    <licenses>
-        <license>
-            <name>Apache License version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-        </license>
-    </licenses>
+    <distributionManagement>
+        <repository>
+            <id>bintray</id>
+            <name>oss-jfrog-artifactory-snapshots</name>
+            <url>https://oss.jfrog.org/artifactory/oss-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>bintray</id>
+            <name>oss-jfrog-artifactory-snapshots</name>
+            <url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/JavaMoney/javamoney-parent/issues</url>
+    </issueManagement>
 
     <build>
         <extensions>
@@ -138,33 +193,6 @@
         </extensions>
         <pluginManagement>
             <plugins>
-                <!-- ======================================================= -->
-                <!-- License -->
-                <!-- ======================================================= -->
-                <!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>license-maven-plugin</artifactId>
-                    <version>1.4</version> </plugin> -->
-                <plugin>
-                    <groupId>com.google.code.maven-license-plugin</groupId>
-                    <artifactId>maven-license-plugin</artifactId>
-                    <version>1.4.0</version>
-                    <configuration>
-                        <basedir>${basedir}</basedir>
-                        <header>${basedir}/src/etc/header.txt</header>
-                        <quiet>false</quiet>
-                        <failIfMissing>true</failIfMissing>
-                        <aggregate>false</aggregate>
-                        <encoding>UTF-8</encoding>
-                        <excludes>
-                            <exclude>target/**</exclude>
-                            <exclude>LICENSE*.html</exclude>
-                            <exclude>README.*</exclude>
-                            <exclude>checkstyle*.*</exclude>
-                            <exclude>*.css</exclude>
-                        </excludes>
-                    </configuration>
-                </plugin>
-                <!-- TODO enable this only for major upgrades (ensure to copy LICENSE.txt
-                    to LICENSE.bak first) -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-gpg-plugin</artifactId>
@@ -189,13 +217,10 @@
                     </executions>
                     <configuration>
                         <detectLinks>true</detectLinks>
-                        <!-- excludePackageNames>blabla</excludePackageNames -->
                         <keywords>true</keywords>
                         <linksource>true</linksource>
                         <failOnError>false</failOnError>
-                        <!-- overview>${basedir}/overview.html</overview -->
                         <source>${maven.compile.sourceLevel}</source>
-                        <!-- stylesheetfile>${basedir}/src/site/css/money-jdoc.css</stylesheetfile -->
                         <verbose>true</verbose>
                     </configuration>
                 </plugin>
@@ -272,8 +297,6 @@
                         </execution>
                     </executions>
                 </plugin>
-
-
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
@@ -300,14 +323,6 @@
                         <excludes>
                             <exclude>**/Abstract*.java</exclude>
                         </excludes>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.4.1</version>
-                    <configuration>
-                        <!-- Workaround for MGPG-9 and MRELEASE-424, MRELEASE-263 -->
-                        <mavenExecutorId>forked-path</mavenExecutorId>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -361,39 +376,6 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <name>Sonatype OSS Snapshots</name>
-            <id>SonatypeOSS</id>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </repository>
-    </repositories>
-
-    <distributionManagement>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-            <name>Sonatype Release Repository</name>
-        </repository>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <name>Sonatype Nexus Snapshots</name>
-        </snapshotRepository>
-    </distributionManagement>
-
-    <issueManagement>
-        <system>GitHub</system>
-        <url>https://github.com/JavaMoney/javamoney-parent/issues</url>
-    </issueManagement>
 
     <profiles>
         <profile>
