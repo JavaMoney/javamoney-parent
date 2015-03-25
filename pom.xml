@@ -16,7 +16,6 @@
 		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<slf4j.version>1.6.1</slf4j.version>
 	</properties>
 
 	<organization>
@@ -147,33 +146,6 @@
 		</extensions>
 		<pluginManagement>
 			<plugins>
-				<!-- ======================================================= -->
-				<!-- License -->
-				<!-- ======================================================= -->
-				<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>license-maven-plugin</artifactId> 
-					<version>1.4</version> </plugin> -->
-				<plugin>
-					<groupId>com.google.code.maven-license-plugin</groupId>
-					<artifactId>maven-license-plugin</artifactId>
-					<version>1.4.0</version>
-					<configuration>
-						<basedir>${basedir}</basedir>
-						<header>${basedir}/src/etc/header.txt</header>
-						<quiet>false</quiet>
-						<failIfMissing>true</failIfMissing>
-						<aggregate>false</aggregate>
-						<encoding>UTF-8</encoding>
-						<excludes>
-							<exclude>target/**</exclude>
-							<exclude>LICENSE*.html</exclude>
-							<exclude>README.*</exclude>
-							<exclude>checkstyle*.*</exclude>
-							<exclude>*.css</exclude>
-						</excludes>
-					</configuration>
-				</plugin>
-				<!-- TODO enable this only for major upgrades (ensure to copy LICENSE.txt 
-					to LICENSE.bak first) -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-gpg-plugin</artifactId>
@@ -372,32 +344,35 @@
 	</build>
 
 	<repositories>
-		<repository>
-			<name>Sonatype OSS Snapshots</name>
-			<id>SonatypeOSS</id>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>daily</updatePolicy>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-		</repository>
-	</repositories>
+	        <repository>
+	            <snapshots>
+	                <enabled>false</enabled>
+	            </snapshots>
+	            <id>central</id>
+	            <name>libs-release</name>
+	            <url>http://oss.jfrog.org/artifactory/libs-release</url>
+	        </repository>
+	        <repository>
+	            <snapshots />
+	            <id>snapshots</id>
+	            <name>libs-snapshot</name>
+	            <url>http://oss.jfrog.org/artifactory/libs-snapshot</url>
+	        </repository>
+	 </repositories>
+
 
 	<distributionManagement>
-		<repository>
-			<id>sonatype-nexus-staging</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-			<name>Sonatype Release Repository</name>
-		</repository>
-		<snapshotRepository>
-			<id>sonatype-nexus-snapshots</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-			<name>Sonatype Nexus Snapshots</name>
-		</snapshotRepository>
-	</distributionManagement>
+	        <repository>
+	            <id>bintray</id>
+	            <name>oss-jfrog-artifactory-snapshots</name>
+	            <url>https://oss.jfrog.org/artifactory/oss-release-local</url>
+	        </repository>
+	        <snapshotRepository>
+	            <id>bintray</id>
+	            <name>oss-jfrog-artifactory-snapshots</name>
+	            <url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+	        </snapshotRepository>
+       </distributionManagement>
 
 	<issueManagement>
 		<system>GitHub</system>
