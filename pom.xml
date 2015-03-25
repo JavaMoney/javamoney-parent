@@ -308,18 +308,18 @@
 					<version>3.1</version>
 				</plugin>
 				<plugin>
-					<groupId>org.jacoco</groupId>
-					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>0.6.3.201306030806</version>
-					<configuration>
+		                    <groupId>org.jacoco</groupId>
+		                    <artifactId>jacoco-maven-plugin</artifactId>
+		                    <version>0.7.2.201409121644</version>
+				    <configuration>
 						<destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
 						<dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
-					</configuration>
+			  	    </configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.asciidoctor</groupId>
 					<artifactId>asciidoctor-maven-plugin</artifactId>
-					<version>0.1.4</version>
+					<version>1.5.0</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
