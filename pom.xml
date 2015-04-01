@@ -39,6 +39,13 @@
                 <role>Expert Group Member</role>
             </roles>
         </developer>
+         <developer>
+            <id>otaviojava</id>
+            <name>Otávio Santana</name>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
         <developer>
             <id>tom-huesler</id>
             <name>Thomas Hüsler</name>
