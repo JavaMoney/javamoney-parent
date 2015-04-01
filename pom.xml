@@ -39,7 +39,7 @@
                 <role>Expert Group Member</role>
             </roles>
         </developer>
-         <developer>
+        <developer>
             <id>otaviojava</id>
             <name>Otávio Santana</name>
             <roles>
@@ -72,6 +72,13 @@
         <developer>
             <id>jezdavies</id>
             <name>Jeremy Davies</name>
+            <roles>
+                <role>Expert Group Member</role>
+            </roles>
+        </developer>
+         <developer>
+            <id>-</id>
+            <name>Manuela Grindei</name>
             <roles>
                 <role>Expert Group Member</role>
             </roles>
