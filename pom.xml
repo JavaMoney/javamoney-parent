@@ -6,7 +6,9 @@
     <version>1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Money and Currency - JavaMoney parent</name>
-    <description>JavaMoney Parent POM</description>
+    <description>The root "POM" project for all modules under org.javamoney.
+        This includes the RI/TCK projects, but not jsr354-api (which is standalone).
+    </description>
     <url>http://javamoney.org</url>
     <inceptionYear>2012</inceptionYear>
 
