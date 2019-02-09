@@ -318,7 +318,6 @@
                         <useSystemClassLoader>true</useSystemClassLoader>
                         <skipTests>false</skipTests>
                         <trimStackTrace>false</trimStackTrace>
-                        <testFailureIgnore>true</testFailureIgnore>
                         <forkMode>once</forkMode>
                         <includes>
                             <include>**/*Test.java</include>
