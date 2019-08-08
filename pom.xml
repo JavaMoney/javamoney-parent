@@ -30,21 +30,21 @@
             <name>Anatole Tresch</name>
             <organization>Trivadis</organization>
             <roles>
-                <role>Specification Lead</role>
+                <role>Maintenance Lead</role>
             </roles>
         </developer>
         <developer>
             <id>keilw</id>
             <name>Werner Keil</name>
             <roles>
-                <role>Expert Group Member</role>
+                <role>Maintenance Lead</role>
             </roles>
         </developer>
         <developer>
             <id>otaviojava</id>
             <name>Otávio Santana</name>
             <roles>
-                <role>Expert Group Member</role>
+                <role>Maintenance Lead</role>
             </roles>
         </developer>
         <developer>
@@ -400,7 +400,7 @@
                         <manifestEntries>
                             <Specification-Title>${project.name}</Specification-Title>
                             <Specification-Version>${project.version}</Specification-Version>
-                            <Specification-Vendor>Credit Suisse AG</Specification-Vendor>
+                            <Specification-Vendor>Werner Keil, Otavio Santana, Trivadis AG</Specification-Vendor>
                             <Implementation-Vendor>${project.organization.name}</Implementation-Vendor>
                             <Implementation-URL>http://www.javamoney.org</Implementation-URL>
                         </manifestEntries>
