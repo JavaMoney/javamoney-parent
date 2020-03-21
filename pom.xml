@@ -16,7 +16,7 @@
         <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jacoco.plugin.version>0.7.7.201606060606</jacoco.plugin.version>
+        <jacoco.plugin.version>0.8.5</jacoco.plugin.version>
     </properties>
 
     <organization>
