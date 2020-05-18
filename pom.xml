@@ -360,12 +360,12 @@
                 <plugin>
                     <groupId>org.eluder.coveralls</groupId>
                     <artifactId>coveralls-maven-plugin</artifactId>
-                    <version>2.2.0</version>
+                    <version>4.3.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.asciidoctor</groupId>
                     <artifactId>asciidoctor-maven-plugin</artifactId>
-                    <version>1.5.2</version>
+                    <version>1.5.6</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -400,7 +400,7 @@
                         <manifestEntries>
                             <Specification-Title>${project.name}</Specification-Title>
                             <Specification-Version>${project.version}</Specification-Version>
-                            <Specification-Vendor>Werner Keil, Otavio Santana, Trivadis AG</Specification-Vendor>
+                            <Specification-Vendor>Werner Keil, Otavio Santana and others</Specification-Vendor>
                             <Implementation-Vendor>${project.organization.name}</Implementation-Vendor>
                             <Implementation-URL>http://www.javamoney.org</Implementation-URL>
                         </manifestEntries>
