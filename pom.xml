@@ -26,14 +26,6 @@
 
     <developers>
         <developer>
-            <id>atsticks</id>
-            <name>Anatole Tresch</name>
-            <organization>Trivadis</organization>
-            <roles>
-                <role>Maintenance Lead</role>
-            </roles>
-        </developer>
-        <developer>
             <id>keilw</id>
             <name>Werner Keil</name>
             <roles>
@@ -141,21 +133,7 @@
             <roles>
                 <role>Expert Group Member</role>
             </roles>
-        </developer>
-        <developer>
-            <id>jodastephen</id>
-            <name>Stephen Colebourne</name>
-            <roles>
-                <role>Expert Group Member</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>crazybob</id>
-            <name>Bob Lee</name>
-            <roles>
-                <role>Expert Group Member</role>
-            </roles>
-        </developer>
+        </developer> 
         <developer>
             <id>-</id>
             <name>Arumugam Swaminathan</name>
@@ -164,7 +142,27 @@
             </roles>
         </developer>
     </developers>
-
+	<contributors>
+	    <contributor>
+            <name>Stephen Colebourne</name>
+            <roles>
+                <role>Expert Group Member Emeritus</role>
+            </roles>
+        </contributor>
+        <contributor>
+            <name>Bob Lee</name>
+            <roles>
+                <role>Expert Group Member Emeritus</role>
+            </roles>
+        </contributor>
+		<contributor>            
+            <name>Anatole Tresch</name>
+            <organization>Trivadis</organization>
+            <roles>
+                <role>Maintenance Lead Rep Emeritus</role>
+            </roles>
+        </contributor>
+	</contributors>
     <scm>
         <connection>scm:git:https://github.com/JavaMoney/javamoney-parent.git</connection>
         <tag>master</tag>
