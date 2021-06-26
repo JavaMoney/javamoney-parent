@@ -7,4 +7,6 @@ This module is licenced under the the [Apache 2 Licence](https://www.apache.org/
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.javamoney/javamoney-parent/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.javamoney/javamoney-parent) 
 [![Build Status](https://travis-ci.com/JavaMoney/javamoney-parent.svg?branch=master)](https://travis-ci.com/JavaMoney/javamoney-parent)
+[![Snapshot with Maven](https://github.com/JavaMoney/javamoney-parent/actions/workflows/maven-snapshot.yml/badge.svg)](https://github.com/JavaMoney/javamoney-parent/actions/workflows/maven-snapshot.yml)
+
 [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](http://maven.org/)
