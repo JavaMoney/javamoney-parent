@@ -16,7 +16,7 @@
         <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jacoco.plugin.version>0.8.5</jacoco.plugin.version>
+        <jacoco.plugin.version>0.8.8</jacoco.plugin.version>
     </properties>
 
     <organization>
@@ -502,11 +502,12 @@
                     </plugins>
                 </pluginManagement>
                 <plugins>
+                    <!--
                     <plugin>
-                        <!-- Usage: mvn clean deploy -Dgpg.passphrase=yourpassphrase ; Or sign
+                        < Usage: mvn clean deploy -Dgpg.passphrase=yourpassphrase ; Or sign
                             already deployed artifact: mvn gpg:sign-and-deploy-file -DpomFile=target/myapp-1.0.pom
                             -Dfile=target/myapp-1.0.jar -Durl=https://oss.sonatype.org/service/local/staging/deploy/maven2/
-                            -DrepositoryId=sonatype-nexus-staging -->
+                            -DrepositoryId=sonatype-nexus-staging >
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
                         <configuration>
@@ -523,6 +524,7 @@
                             </execution>
                         </executions>
                     </plugin>
+                    -->
                 </plugins>
             </build>
         </profile>
