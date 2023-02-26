@@ -410,6 +410,11 @@
 
 	<!-- Additional repositories -->
 	<repositories>
+        <repository>
+            <id>MavenCentral</id>
+            <name>Central Maven Repository</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
 		<repository>
 			<snapshots>
 				<enabled>true</enabled>
