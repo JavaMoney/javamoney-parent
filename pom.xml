@@ -411,11 +411,6 @@
 	<!-- Additional repositories -->
 	<repositories>
         <repository>
-            <id>MavenCentral</id>
-            <name>Central Maven Repository</name>
-            <url>https://repo.maven.apache.org/maven2/</url>
-        </repository>
-        <repository>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -436,6 +431,12 @@
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
+
+    <!-- CI System -->
+    <ciManagement>
+        <system>GitHub Actions</system>
+        <url>https://github.com/JavaMoney/javamoney-parent/actions</url>
+    </ciManagement>
 
     <issueManagement>
         <system>GitHub</system>
